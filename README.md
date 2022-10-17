@@ -17,3 +17,6 @@ The goal of this project is to create a website/depot for makeup junkies or curi
 * CSS will style the pages content, i.e the mouse or click button may be a makeup product or shopping bag
 * JS will provide user activity and render the results requested 
 
+#### Trello Board + Wireframe
+https://trello.com/b/QJurAQbK/api-project
+
