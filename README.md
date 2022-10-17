@@ -2,7 +2,7 @@
 
 
 # Goals
-The goal of this project is to create a website/depot for makeup junkies or curious users to search for their favorite makeup brand and items. This depot includes a varitey of options the user can search for, includingg an item color and providing a link to the website for the item selected and or brand.
+The goal of this project is to create a website/depot for makeup junkies or curious users to search for their favorite makeup brand and items. This depot includes a varitey of options the user can search for, including an item color and providing a link to the website for the item selected and or brand.
 
 
 ## Desired Functionality
