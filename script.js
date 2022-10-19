@@ -2,23 +2,22 @@
 
 
 const button = document.querySelector ("#getData")
-const input = document.getElementById ("makeup")
-console.log(input)
+// const input = document.getElementById ("inputBar")
+// console.log(input)
+console.log("hello world")
+function getData(){
+const input = document.getElementById("inputBar")
+console.log(input.value)
+    // event.preventDefault();
 
-async function getData(e){
-
-    e.preventDefault();
-
-    fetch ("http://makeup-api.herokuapp.com/api/v1/products"+input.value) .then(res=> {
+    fetch ("http://makeup-api.herokuapp.com/api/v1/products.json",{mode: 'cors'}).then(res=> {
 
         return res.json();
+        // console.log(res.json())
     }).then(data=> {
-
         console.log(data)
-        result.innerHTML=data.name
-    })
-
-    .catch(e=> {    
+        // result.innerHTML=data.name
+    }).catch(e=> {    
         console.log(e)
 
     })
@@ -27,7 +26,7 @@ async function getData(e){
    
 }
 
-button.addEventListener = ("click", getData)
+// button.addEventListener = ("click", getData())
 
 
 
