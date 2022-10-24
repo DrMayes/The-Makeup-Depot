@@ -1,10 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 
-
-body{
-    background-color: aquamarine;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: black;
+  background: white;
+  font-family: "Lato", sans-serif;
+}
+.navbar {
+  background: white;
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgb(231, 226, 221);
+  z-index: 1;
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+} 
+ .nav-icon {
+  font-size: 1.5rem;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.logout-btn {
+  cursor: pointer;
+}
+.makeup {
+  min-height: calc(50vh - 60px);
+  background: url("makeup.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  text-align: center;
+  background: palevioletred;
+  display: inline-block;
+  padding: 2rem;
+}
+.banner-title {
+  font-size: 2 rem;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Poiret One', cursive;
 }
 
-h1 {
-    text-align: center;
+.shop-container{
+  display: flexbox;
+  text-align: center;
+  background-color: palevioletred;
+  color: white;
 }
+.section-title{
+  display: inline-flex;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+} 
+.tabs-container{
+  display: flexbox;
+  background-color: palevioletred;
+}
+.tabs{
+  display: flex;
+  justify-content: space-between;
+}
+.tabs-style{
+  color: white;
+  text-decoration: underline;
+  background-color: pink;
+  cursor: pointer;
+  font-family: 'Poiret One', cursive;
+  font-size: 25px;
+}
+.tabs-style:hover{
+background-color: transparent;
+}
+.products-container{
+  display: flexbox;
+  text-align: center;
+}
+button {
+  background-color: white;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+.bottom-tab-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-tabs-style{
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: pink;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+  }
+
+    
+
+
+
+
+
+
+
+
 

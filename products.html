@@ -1,341 +1,412 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makeup Depot</title>
-   <style>
-    .products{
-        height:500px;
-        display:flex;
-    }
-    .container {
-        max-width: 1068px;
-        margin: auto;
-        width: 100%;
-    }
-    /* header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-    } */
-    .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;        
-        padding: 20px 0;
-    }
-    .shopping {
-        font-size: 1.1rem;
-        color: red;
-        font-weight: 400;
-    }
-    #cart {
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
-    .section-title {
-        font-size: 1.5rem;
-        font-weight: 60;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-    .shop {
-        margin-top: 2rem;
-    }
-    .products {
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(220 px, auto));
-        gap: 1.5rem;
-    }
-    #product1 {
-        border: 1px;
-    }
-
-   </style>
-</head>
-<body>
-        <div class="nav container">
-            <a href = "products.html" class = "shopping">THE MAKEUP DEPOT</a>
-            <img id = "cart" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAdtJREFUaEPtme0xBEEQht+LgAwQASJABkSACBABIRABIiAEIkAEyIAIqKdqVs1NLTu33VPnrrr/ULU33f1+9Mzs3UQLHpMF718BYN4KhgKhgJGBpbTQvqRzSVtGcryXv0k6k3SfJ+5T4FXSund1p3zPkraHAHw5FWuVZor0PgUCQCvqU95QoLSd1XKz5jMrwC7AbtAF/2+OtM1LsV2zdT8N5DIDOCj24ktJJyMBXEk6zdZyBt21BlAW5czg7BgTG5I4oLqoIcOsAAUpnEdN4RJgSQTPaw5RMwAKHUu6KTqaZRZK75PqSNJ1hYwuAFCBYf4YoUQf86uJff4OhQsAinCpYqDLYCYYzN1sd4LxB0lYLfd8t5bBZYBrwg0AxbARdrIEtsE+teEKoFMCEKWdhhrCLjRfy3yXzx0AibHFhaTboa7T88NkpxrPlymbAOiKAITZwO/v2YnNCbuW5gLGLe8bTQFUCmD6WAAw0eewOBRwINGUIhQw0eewOBRwINGUIhQw0eewOBRwIHF0ik9JUzfYvu9GuUnujC7RduFjutH+VOkDUPPdTNs2f8++l67qfwLgISB4r+UevzKvbrO6MM8LE+6YiqX8iekfEF7fQihQz1WbT4YCbXitz/oNNXxYMR7mzzcAAAAASUVORK5CYII="/>
-        </div>
-
-        <section class="shop container">
-            <h2 class="section-title">Shop Products</h2>
-        </section>
-        
-<div class="tabs">
-    <button onclick="goToTab1()">tab1</button>
-      <button  onclick="goToTab2()">tab2</button>
-      <button onclick="goToTab3()">tab3</button>
-      <button onclick="goToTab4()">tab4</button>
-      <button onclick="goToTab5()">tab5</button>
-      <button onclick="goToTab6()">tab6</button>
-      <button onclick="goToTab7()">tab7</button>
-      <button onclick="goToTab8()">tab8</button>
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Makeup DEPOT</title>
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" type= "text/css" href="styles.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Dancing+Script:wght@400;500;600;700&family=Poiret+One&display=swap');
       
-</div>
-    
-    
-        <div class="products">
-    
-            <div id="product1">
-               <img src="" alt="no data" id="img_product1" />
-               <p id="des_product1"></p>
-               <p id="price_product1"></p>
-            </div>
-            <div id="product2">
-                <img src="" alt="no data" id="img_product2" />
-                <p id="des_product2"></p>
-                <p id="price_product2"></p>
-            </div>
-            <div id="product3">
-                <img src="" alt="no data" id="img_product3" />
-                <p id="des_product3"></p>
-                <p id="price_product3"></p>
-            </div>
-            <div id="product4">
-                <img src="" alt="no data" id="img_product4" />
-                <p id="des_product4"></p>
-                <p id="price_product4"></p>
-    
-            </div>
+      </style>
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="navbar-center">
+        <span class="nav-icon">
+          <img style="height: 35px" class = "logout-btn" src="./images/logout.png" />
+        </span>
+        <!-- <img class = "product-image" src="./images/logo.png" alt="store logo" /> -->
+        <div class="cart-btn">
+          <span class="nav-icon">
+            <i class="fas fa-cart-plus"></i>
+          </span>
+          
+
+
+
+          
+
+
+          </div>
         </div>
-    
-      <button onclick="pre()">Pre</button><button onclick="next()">next</button>
-    </form>
+      </div>
+    </nav>
+
+    <header class="makeup">
+      <div class="banner">
+        <h1 class="banner-title">SHOP THE<br>MAKEUP DEPOT COLLECTION</h1>
+      </div>
       
-      <script >
-     const arr1=[]
-     const arr2=[]
-     const arr3=[]
-     const arr4=[]
-     const arr5=[]
-     const arr6=[]
-     const arr7=[]
-     const arr8=[]
-     fetch ("http://makeup-api.herokuapp.com/api/v1/products.json").then(res=> {
+    </header>
+
     
-            return res.json();
-            // console.log(res.json())
-        }).then(data=> {
-            // console.log(data)
-           
-            
-            for(let i=0;i<data.length;i++){
-                if(data[i].brand=="nyx"){
-                    arr1.push(data[i])
-                }
-                if(data[i].brand=="clinique"){
-                    arr2.push(data[i])
-                }
-                if(data[i].brand=="dior"){
-                    arr3.push(data[i])
-                }
-                if(data[i].brand=="benefit"){
-                    arr4.push(data[i])
-                }
-                if(data[i].brand=="l'oreal"){
-                    arr5.push(data[i])
-                }
-                if(data[i].brand=='covergirl'){
-                    arr6.push(data[i])
-                }
-                if(data[i].brand=='maybelline'){
-                    arr7.push(data[i])
-                }
-                if(data[i].brand=='e.l.f.'){
-                    arr8.push(data[i])
-                }
-               
-            }
-            console.log(arr1);
-            goToTab1();
-       
-        }).catch(e=> {    
-            console.log(e)
-    
-        })
-    
-    
-    const img1=document.getElementById("img_product1")
-    const img2=document.getElementById("img_product2")
-    const img3=document.getElementById("img_product3")
-    const img4=document.getElementById("img_product4")
-    
-    
-    const p1=document.getElementById("des_product1")
-    const p2=document.getElementById("des_product2")
-    const p3=document.getElementById("des_product3")
-    const p4=document.getElementById("des_product4")
-    let index=0;
-    let currentTab="Tab1";
+    <section class="shop-container">
+      <h2 class="section-title">Shop Products</h2>
+  </section>
  
-    function goToTab1(){
-      img1.src="https:"+arr1[index].api_featured_image;
-      img2.src="https:"+arr1[index+1].api_featured_image;
-      img3.src="https:"+arr1[index+2].api_featured_image;
-      img4.src="https:"+arr1[index+3].api_featured_image;
-    
-      p1.innerHTML=arr1[index].description;
-      p2.innerHTML=arr1[index+1].description;
-      p3.innerHTML=arr1[index+2].description;
-      p4.innerHTML=arr1[index+3].description;
-    
-      currentTab="Tab1";
-    }
-    function goToTab2(){
-      img1.src="https:"+arr2[index].api_featured_image;
-      img2.src="https:"+arr2[index+1].api_featured_image;
-      img3.src="https:"+arr2[index+2].api_featured_image;
-      img4.src="https:"+arr2[index+3].api_featured_image;
-    
-      p1.innerHTML=arr2[index].description;
-      p2.innerHTML=arr2[index+1].description;
-      p3.innerHTML=arr2[index+2].description;
-      p4.innerHTML=arr2[index+3].description;
-    
-      currentTab="Tab2";
-    }
-    function goToTab3(){
-      img1.src="https:"+arr3[index].api_featured_image;
-      img2.src="https:"+arr3[index+1].api_featured_image;
-      img3.src="https:"+arr3[index+2].api_featured_image;
-      img4.src="https:"+arr3[index+3].api_featured_image;
-    
-      p1.innerHTML=arr3[index].description;
-      p2.innerHTML=arr3[index+1].description;
-      p3.innerHTML=arr3[index+2].description;
-      p4.innerHTML=arr3[index+3].description;
-    
-      currentTab="Tab3";
-    }
-    function goToTab4(){
-      img1.src="https:"+arr4[index].api_featured_image;
-      img2.src="https:"+arr4[index+1].api_featured_image;
-      img3.src="https:"+arr4[index+2].api_featured_image;
-      img4.src="https:"+arr4[index+3].api_featured_image;
-    
-      p1.innerHTML=arr4[index].description;
-      p2.innerHTML=arr4[index+1].description;
-      p3.innerHTML=arr4[index+2].description;
-      p4.innerHTML=arr4[index+3].description;
-    
-      currentTab="Tab4";
-    }
-    function goToTab5(){
-      img1.src="https:"+arr5[index].api_featured_image;
-      img2.src="https:"+arr5[index+1].api_featured_image;
-      img3.src="https:"+arr5[index+2].api_featured_image;
-      img4.src="https:"+arr5[index+3].api_featured_image;
-    
-      p1.innerHTML=arr5[index].description;
-      p2.innerHTML=arr5[index+1].description;
-      p3.innerHTML=arr5[index+2].description;
-      p4.innerHTML=arr5[index+3].description;
-    
-      currentTab="Tab5";
-    }
-    function goToTab6(){
-      img1.src="https:"+arr6[index].api_featured_image;
-      img2.src="https:"+arr6[index+1].api_featured_image;
-      img3.src="https:"+arr6[index+2].api_featured_image;
-      img4.src="https:"+arr6[index+3].api_featured_image;
-    
-      p1.innerHTML=arr6[index].description;
-      p2.innerHTML=arr6[index+1].description;
-      p3.innerHTML=arr6[index+2].description;
-      p4.innerHTML=arr6[index+3].description;
-    
-      currentTab="Tab6";
-    }
-    function goToTab7(){
-      img1.src="https:"+arr7[index].api_featured_image;
-      img2.src="https:"+arr7[index+1].api_featured_image;
-      img3.src="https:"+arr7[index+2].api_featured_image;
-      img4.src="https:"+arr7[index+3].api_featured_image;
-    
-      p1.innerHTML=arr7[index].description;
-      p2.innerHTML=arr7[index+1].description;
-      p3.innerHTML=arr7[index+2].description;
-      p4.innerHTML=arr7[index+3].description;
-    
-      currentTab="Tab7";
-    }
-    function goToTab8(){
-      img1.src="https:"+arr8[index].api_featured_image;
-      img2.src="https:"+arr8[index+1].api_featured_image;
-      img3.src="https:"+arr8[index+2].api_featured_image;
-      img4.src="https:"+arr8[index+3].api_featured_image;
-    
-      p1.innerHTML=arr8[index].description;
-      p2.innerHTML=arr8[index+1].description;
-      p3.innerHTML=arr8[index+2].description;
-      p4.innerHTML=arr8[index+3].description;
-    
-      currentTab="Tab8";
-    }
-    
-    function next(){
-    if(index<100){
-        index+=8;
-    }
-    if(currentTab=="Tab1"){
-    goToTab1();
-    }
-    if(currentTab=="Tab2"){
-    goToTab2();
-    }
-    if(currentTab=="Tab3"){
-    goToTab3();
-    }
-    if(currentTab=="Tab4"){
-    goToTab4();
-    }
-    if(currentTab=="Tab5"){
-    goToTab5();
-    }
-    if(currentTab=="Tab6"){
-    goToTab6();
-    }
-    if(currentTab=="Tab7"){
-    goToTab7();
-    }
-    if(currentTab=="Tab8"){
-    goToTab8();
-    }
-    }
-    function pre(){
-    if(index>8){
-        index-=8;
-    }
-    if(currentTab=="Tab1"){
-    goToTab1();
-    }
-    if(currentTab=="Tab2"){
-    goToTab2();
-    }
-    if(currentTab=="Tab3"){
-    goToTab3();
-    }
-    if(currentTab=="Tab4"){
-    goToTab4();
-    }
-    if(currentTab=="Tab5"){
-    goToTab5();
-    }
-    if(currentTab=="Tab6"){
-    goToTab6();
-    }
-    if(currentTab=="Tab7"){
-    goToTab7();
-    }
-    if(currentTab=="Tab8"){
-    goToTab8();
-    }
-    }
-        
-      </script>
+<section class="tabs-container">
+<div class="tabs">
+<button class="tabs-style" onclick="goToTab1()">NYX</button>
+<button  class="tabs-style" onclick="goToTab2()">Clinique</button>
+<button class="tabs-style" onclick="goToTab3()">Dior</button>
+<button class="tabs-style" onclick="goToTab4()">Benefit</button>
+<button  class="tabs-style" onclick="goToTab5()">L'oreal</button>
+<button class="tabs-style" onclick="goToTab6()">Covergirl</button>
+<button class="tabs-style" onclick="goToTab7()">Maybelline</button>
+<button class="tabs-style" onclick="goToTab8()">E.L.F.</button>
+</section>
+
+</div>
+
+<section class="products-container">
+  <div class="products">
+
+    <div id="product1" onclick="gotoProduct(1)">
+       <img src="" alt="no data" id="img_product1" />
+       <p id="des_product1"></p>
+       <p id="url_product1"></p>
+       <p id="price_product1"></p>
+
+  
+    </div>
+    <div id="product2" onclick="gotoProduct(2)">
+        <img src="" alt="no data" id="img_product2" />
+        <p id="des_product2"></p>
+        <p id="url_product2"></p>
+        <p id="price_product2"></p>
+    </div>
+    <div id="product3" onclick="gotoProduct(3)" >
+        <img src="" alt="no data" id="img_product3" />
+        <p id="des_product3"></p>
+        <p id="url_product3"></p>
+        <p id="price_product3"></p>
+    </div>
+    <div id="product4" onclick="gotoProduct(4)">
+        <img src="" alt="no data" id="img_product4" />
+        <p id="des_product4"></p>
+        <p id="url_product4"></p>
+        <p id="price_product4"></p>
+
+    </div>
+</div>
+</section>
+  
+<div class="bottom-tab-container">
+<button class="bottom-tabs-style" onclick="pre()">Pre</button><button class="bottom-tabs-style" onclick="next()">next</button>
+</div>
+<script >
+const arr1=[]
+const arr2=[]
+const arr3=[]
+const arr4=[]
+const arr5=[]
+const arr6=[]
+const arr7=[]
+const arr8=[]
+fetch ("http://makeup-api.herokuapp.com/api/v1/products.json").then(res=> {
+
+      return res.json();
+      // console.log(res.json())
+  }).then(data=> {
+      // console.log(data)
+     
       
-    </body>
-    </html>
+      for(let i=0;i<data.length;i++){
+          if(data[i].brand=="nyx"){
+              arr1.push(data[i])
+          }
+          if(data[i].brand=="clinique"){
+              arr2.push(data[i])
+          }
+          if(data[i].brand=="dior"){
+              arr3.push(data[i])
+          }
+          if(data[i].brand=="benefit"){
+              arr4.push(data[i])
+          }
+          if(data[i].brand=="l'oreal"){
+              arr5.push(data[i])
+          }
+          if(data[i].brand=='covergirl'){
+              arr6.push(data[i])
+          }
+          if(data[i].brand=='maybelline'){
+              arr7.push(data[i])
+          }
+          if(data[i].brand=='e.l.f.'){
+              arr8.push(data[i])
+          }
+         
+      }
+      console.log(arr1);
+      goToTab1();
+ 
+  }).catch(e=> {    
+      console.log(e)
+
+  })
+
+
+const img1=document.getElementById("img_product1")
+const img2=document.getElementById("img_product2")
+const img3=document.getElementById("img_product3")
+const img4=document.getElementById("img_product4")
+
+
+const p1=document.getElementById("des_product1")
+const p2=document.getElementById("des_product2")
+const p3=document.getElementById("des_product3")
+const p4=document.getElementById("des_product4")
+
+// const pA=document.getElementById("price_product1")
+// const pB=document.getElementById("price_product2")
+// const pC=document.getElementById("price_product3")
+// const pD=document.getElementById("price_product4")
+
+let index=0;
+let currentTab="Tab1";
+
+function goToTab1(){
+img1.src="https:"+arr1[index].api_featured_image;
+img2.src="https:"+arr1[index+1].api_featured_image;
+img3.src="https:"+arr1[index+2].api_featured_image;
+img4.src="https:"+arr1[index+3].api_featured_image;
+
+p1.innerHTML=arr1[index].name;
+p2.innerHTML=arr1[index+1].name;
+p3.innerHTML=arr1[index+2].name;
+p4.innerHTML=arr1[index+3].name;
+
+
+
+currentTab="Tab1";
+}
+function goToTab2(){
+img1.src="https:"+arr2[index].api_featured_image;
+img2.src="https:"+arr2[index+1].api_featured_image;
+img3.src="https:"+arr2[index+2].api_featured_image;
+img4.src="https:"+arr2[index+3].api_featured_image;
+
+p1.innerHTML=arr2[index].name;
+p2.innerHTML=arr2[index+1].name;
+p3.innerHTML=arr2[index+2].name;
+p4.innerHTML=arr2[index+3].name;
+
+currentTab="Tab2";
+}
+function goToTab3(){
+img1.src="https:"+arr3[index].api_featured_image;
+img2.src="https:"+arr3[index+1].api_featured_image;
+img3.src="https:"+arr3[index+2].api_featured_image;
+img4.src="https:"+arr3[index+3].api_featured_image;
+
+p1.innerHTML=arr3[index].name;
+p2.innerHTML=arr3[index+1].name;
+p3.innerHTML=arr3[index+2].name;
+p4.innerHTML=arr3[index+3].name;
+
+currentTab="Tab3";
+}
+function goToTab4(){
+img1.src="https:"+arr4[index].api_featured_image;
+img2.src="https:"+arr4[index+1].api_featured_image;
+img3.src="https:"+arr4[index+2].api_featured_image;
+img4.src="https:"+arr4[index+3].api_featured_image;
+
+p1.innerHTML=arr4[index].name;
+p2.innerHTML=arr4[index+1].name;
+p3.innerHTML=arr4[index+2].name;
+p4.innerHTML=arr4[index+3].name;
+
+currentTab="Tab4";
+}
+function goToTab5(){
+img1.src="https:"+arr5[index].api_featured_image;
+img2.src="https:"+arr5[index+1].api_featured_image;
+img3.src="https:"+arr5[index+2].api_featured_image;
+img4.src="https:"+arr5[index+3].api_featured_image;
+
+p1.innerHTML=arr5[index].name;
+p2.innerHTML=arr5[index+1].name;
+p3.innerHTML=arr5[index+2].name;
+p4.innerHTML=arr5[index+3].name;
+
+currentTab="Tab5";
+}
+function goToTab6(){
+img1.src="https:"+arr6[index].api_featured_image;
+img2.src="https:"+arr6[index+1].api_featured_image;
+img3.src="https:"+arr6[index+2].api_featured_image;
+img4.src="https:"+arr6[index+3].api_featured_image;
+
+p1.innerHTML=arr6[index].name;
+p2.innerHTML=arr6[index+1].name;
+p3.innerHTML=arr6[index+2].name;
+p4.innerHTML=arr6[index+3].name;
+
+currentTab="Tab6";
+}
+function goToTab7(){
+img1.src="https:"+arr7[index].api_featured_image;
+img2.src="https:"+arr7[index+1].api_featured_image;
+img3.src="https:"+arr7[index+2].api_featured_image;
+img4.src="https:"+arr7[index+3].api_featured_image;
+
+p1.innerHTML=arr7[index].name;
+p2.innerHTML=arr7[index+1].name;
+p3.innerHTML=arr7[index+2].name;
+p4.innerHTML=arr7[index+3].name;
+
+currentTab="Tab7";
+}
+function goToTab8(){
+img1.src="https:"+arr8[index].api_featured_image;
+img2.src="https:"+arr8[index+1].api_featured_image;
+img3.src="https:"+arr8[index+2].api_featured_image;
+img4.src="https:"+arr8[index+3].api_featured_image;
+
+p1.innerHTML=arr8[index].name;
+p2.innerHTML=arr8[index+1].name;
+p3.innerHTML=arr8[index+2].name;
+p4.innerHTML=arr8[index+3].name;
+
+currentTab="Tab8";
+}
+
+function gotoProduct(x){
+  let id;
+  let imgSrc;
+if(x==1){
+ //id of the product
+ if(currentTab=="Tab1"){
+   
+   imgSrc=arr1[index].api_featured_image;
+
+ }
+   if(currentTab=="Tab2"){
+    imgSrc=arr2[index].api_featured_image;
+ }
+}
+if(x==2){
+ //id of the product
+ if(currentTab=="Tab1"){
+   imgSrc=arr1[index+1].api_featured_image;
+  
+
+ }
+   if(currentTab=="Tab2"){
+   imgSrc=arr2[index+1].api_featured_image;
+ }
+}
+  if(x==3){
+ //id of the product
+ if(currentTab=="Tab1"){
+    imgSrc=arr1[index+2].api_featured_image;
+  
+
+ }
+   if(currentTab=="Tab2"){
+  imgSrc=arr2[index+2].api_featured_image;
+ }
+}
+
+  if(x==4){
+ //id of the product
+ if(currentTab=="Tab1"){
+   imgSrc=arr1[index+3].api_featured_image;
+  
+
+ }
+   if(currentTab=="Tab2"){
+  imgSrc=arr2[index+3].api_featured_image;
+ }
+}
+
+
+
+  localStorage.setItem('myProductImg',  imgSrc);
+
+  localStorage.setItem('Img', id);
+  window.open("url.html")
+   
+}
+
+
+  
+
+function next(){
+if(index<100){
+  index+=8;
+}
+if(currentTab=="Tab1"){
+goToTab1();
+}
+if(currentTab=="Tab2"){
+goToTab2();
+}
+if(currentTab=="Tab3"){
+goToTab3();
+}
+if(currentTab=="Tab4"){
+goToTab4();
+}
+if(currentTab=="Tab5"){
+goToTab5();
+}
+if(currentTab=="Tab6"){
+goToTab6();
+}
+if(currentTab=="Tab7"){
+goToTab7();
+}
+if(currentTab=="Tab8"){
+goToTab8();
+}
+}
+function pre(){
+if(index>8){
+  index-=8;
+}
+if(currentTab=="Tab1"){
+goToTab1();
+}
+if(currentTab=="Tab2"){
+goToTab2();
+}
+if(currentTab=="Tab3"){
+goToTab3();
+}
+if(currentTab=="Tab4"){
+goToTab4();
+}
+if(currentTab=="Tab5"){
+goToTab5();
+}
+if(currentTab=="Tab6"){
+goToTab6();
+}
+if(currentTab=="Tab7"){
+goToTab7();
+}
+if(currentTab=="Tab8"){
+goToTab8();
+}
+}
+  
+</script>
+    
+
+
+
+    
+
+  </body>
+  </html>
